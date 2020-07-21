@@ -50,3 +50,30 @@
 		transform: translateY(-100%);
 	}
 }
+
+/* Instead using ModalOpen, ModalClosed
+We can use classNames="fade-slide" defined in CSSTransition component inside modal
+This classes are added automatically 
+.fade-slide-enter
+.fade-slide-enter-active
+.fade-slide-exit
+.fade-slide-exit-active
+*/
+
+.fade-slide-enter {
+}
+
+.fade-slide-enter-active {
+	animation: openModal 0.4s ease-out forwards;
+}
+
+.fade-slide-exit {
+}
+
+.fade-slide-exit-active {
+	animation: closeModal 1s ease-out forwards;
+}
+
+/* 
+But we can also override this and use our Classes, see Modal.js
+*/
