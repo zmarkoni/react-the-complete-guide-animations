@@ -1,5 +1,6 @@
 .Modal {
 	position: fixed;
+	z-index: 200;
 	border: 1px solid #eee;
 	box-shadow: 0 2px 2px #ccc;
 	background-color: white;
@@ -9,38 +10,29 @@
 	top: 30%;
 	left: 25%;
 	width: 50%;
-	z-index: -1;
-	/* transition: all 0.3s ease-out;  */
+	transition: all 0.3s ease-out;
 }
 
 .ModalOpen {
-	z-index: 200;
-	/* opacity: 1;
-    transform: translateY(0); */
-	animation: modalOpen 0.4s ease-out forwards;
+	animation: openModal 0.4s ease-out forwards;
 }
 
 .ModalClosed {
-	/* opacity: 0;
-    transform: translateY(-100%); */
 	animation: closeModal 0.4s ease-out forwards;
 }
 
-@keyframes modalOpen {
+@keyframes openModal {
 	0% {
 		opacity: 0;
 		transform: translateY(-100%);
 	}
-
 	50% {
 		opacity: 1;
 		transform: translateY(90%);
 	}
-
 	100% {
 		opacity: 1;
 		transform: translateY(0);
-		color: green;
 	}
 }
 
@@ -49,12 +41,10 @@
 		opacity: 1;
 		transform: translateY(0);
 	}
-
 	50% {
 		opacity: 0.8;
 		transform: translateY(60%);
 	}
-
 	100% {
 		opacity: 0;
 		transform: translateY(-100%);
